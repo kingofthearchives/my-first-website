@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comic-Con - Session Registration</title>
+    <link rel="stylesheet" href="../css/comiccon.css" />
+</head>
+<body>
+    <header class="cc-header">
+        <nav>
+            <ul>
+                <li><a href="comiccon_register.html">Register</a></li>
+                <li><a href="comiccon_schedule.html">My Schedule</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cc-main">
+        <section class="cc-container">
+            <h1 class="cc-title">🎭 Comic-Con Session Registration</h1>
+            <p class="cc-sub">Build your personal schedule — choose sessions you love.</p>
+
+            <form id="ccForm" class="cc-form" novalidate>
+                <div class="form-row">
+                    <label for="attendeeName">Attendee Name *</label>
+                    <input type="text" id="attendeeName" name="attendeeName" required placeholder="Your full name" />
+                    <div class="error" id="nameError"></div>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com" />
+                    <div class="error" id="emailError"></div>
+                </div>
+
+                <div class="form-row">
+                    <label for="sessionTitle">Session Title *</label>
+                    <select id="sessionTitle" name="sessionTitle" required>
+                        <option value="">-- Select a session --</option>
+                        <option value="marvel-cinematic-universe">Marvel Cinematic Universe: What's Next</option>
+                        <option value="anime-evolution">Anime Evolution: Past to Present</option>
+                        <option value="gaming-future">Gaming's Future: VR & Beyond</option>
+                        <option value="sci-fi-legacy">Sci-Fi Legacy: 50 Years of Iconic Shows</option>
+                        <option value="fantasy-world-building">Fantasy World Building Masterclass</option>
+                        <option value="cosplay-competition">Cosplay Competition & Awards</option>
+                    </select>
+                    <div class="error" id="sessionError"></div>
+                </div>
+
+                <div class="form-row">
+                    <label for="timeSlot">Time Slot</label>
+                    <select id="timeSlot" name="timeSlot">
+                        <option value="">-- Select time (optional) --</option>
+                        <option value="9-am">9:00 AM</option>
+                        <option value="11-am">11:00 AM</option>
+                        <option value="1-pm">1:00 PM</option>
+                        <option value="3-pm">3:00 PM</option>
+                        <option value="5-pm">5:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="fandomCategory">Fandom Category</label>
+                    <select id="fandomCategory" name="fandomCategory">
+                        <option value="">-- Select a fandom --</option>
+                        <option value="anime">Anime</option>
+                        <option value="superheroes">Superheroes</option>
+                        <option value="gaming">Gaming</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="fantasy">Fantasy</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="cosplayNotes">Cosplay Notes (optional)</label>
+                    <textarea id="cosplayNotes" name="cosplayNotes" rows="4" placeholder="Share cosplay plans or accessibility needs..."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Register for Session</button>
+                    <a href="comiccon_schedule.html" class="btn">View My Schedule</a>
+                </div>
+
+                <div id="generalError" class="error"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="cc-footer">&copy; 2025 Comic-Con Event Builder</footer>
+
+    <script src="../js/comiccon.js"></script>
+</body>
+</html>

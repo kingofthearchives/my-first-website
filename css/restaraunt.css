@@ -1,0 +1,230 @@
+/* ============================================
+   RESTAURANT MENU - STARTER CSS
+   STUDENTS: Complete the sections marked with comments
+   ============================================ */
+
+/* BASIC RESET AND BODY STYLING */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* STUDENTS: Change to Google Fonts */
+    line-height: 1.6;
+    color: #333;
+    background-color: rgb(224, 174, 138);
+    /* STUDENTS: Add background color */
+}
+
+/* HEADER AND NAVIGATION - Basic structure provided */
+header {
+    background-color: #2c3e50;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* STUDENTS: Add hover effect for navigation links */
+nav a:hover {
+    /* Example: change color or add underline */    
+    color: #f39c12;
+    text-decoration: underline;
+    
+}
+
+/* MAIN CONTENT AREA */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    /* STUDENTS: Add color and custom font */
+    color: light orange;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.menu-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    /* STUDENTS: Add styling to make this stand out */
+    
+}
+
+/* MENU SECTIONS */
+.menu-section {
+    margin-bottom: 3rem;
+}
+
+.menu-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid orange;
+    padding-bottom: 0.5rem;
+    /* STUDENTS: Add color and styling */
+}
+
+/* MENU ITEMS - Basic structure provided */
+.menu-item {
+    margin-bottom: 1.5rem;
+    padding: auto;
+    background-color: #e74c3c;
+    border-radius: 12px;
+    /* STUDENTS: Add padding, background color, and border */
+    /* STUDENTS: Consider adding border-radius for rounded corners */
+}
+
+.item-content {
+    /* This container helps organize the content */
+    overflow: hidden; /* Clear floats */
+    padding: 0.5rem;
+}
+
+.menu-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    /* STUDENTS: Add color and font styling */
+
+    display: flex;
+    justify-content: space-between; /* Align title and price on same line */
+    align-items: center;                
+    color: #333;
+    font-family: 'Georgia', serif;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    /* STUDENTS: Adjust styling as needed */
+}
+
+/* MENU IMAGES */
+.menu-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    /* STUDENTS: Add border, border-radius, or box-shadow */
+}
+
+/* PRICE STYLING */
+.price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: antiquewhite;
+    text-align: right;
+    
+
+
+    /* STUDENTS: Add color */
+    /* STUDENTS: Make price align to the right */
+    /* HINT: You might use text-align or float */
+}
+
+/* STUDENTS: Add hover effect for menu items */
+/* When someone hovers over a menu-item, change background or add shadow */
+.menu-item:hover {  
+    /* Example: change background color or add box-shadow */
+    background-color: rgb(236, 194, 118);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* CHEF'S SPECIAL BADGE */
+/* STUDENTS: Use ::before pseudo-element to add a badge */
+/* Items with class "special" should display a badge like "Chef's Special" or "⭐" */
+.menu-item.special::before {
+    /* STUDENTS: Add content property with badge text */
+    /* STUDENTS: Style the badge with padding, background-color, border-radius */
+    /* STUDENTS: Position it appropriately (consider display: inline-block) */  
+    content: "⭐ Chef's Special";
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+}
+
+/* FOOTER */
+footer {
+    background-color: #344657;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+
+
+
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+        color: #4CAF50;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    .team-member {
+        margin-bottom: 20px;
+    }
+
+    .team-member img {
+        float: left;
+        margin-right: 20px;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+    }
+
+    .team-member h3 {
+        margin-top: 0;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #333;
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+/* ============================================
+   STUDENTS: Add any additional styling below
+   ============================================ */
