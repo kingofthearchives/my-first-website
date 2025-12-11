@@ -1,0 +1,50 @@
+/* Comic-Con themed styles (compact) */
+:root{
+    --bg1: #0f3460;
+    --accent: #e94560;
+    --accent2: #ff006e;
+    --card: #ffffff;
+    --muted: #6c757d;
+}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background:linear-gradient(135deg,#16213e 0%, #0b2545 100%);
+    color:#fff;
+}
+.cc-header{background:var(--bg1);padding:1rem;border-bottom:4px solid var(--accent)}
+.cc-header nav ul{list-style:none;display:flex;gap:1.25rem;justify-content:center;margin:0;padding:0}
+.cc-header a{color:#fff;text-decoration:none;font-weight:700}
+.cc-main{max-width:960px;margin:2rem auto;padding:1rem}
+.cc-container{background:rgba(255,255,255,0.97);color:#0f3460;border-radius:12px;padding:1.5rem;box-shadow:0 8px 30px rgba(0,0,0,0.5)}
+.cc-title{font-size:2rem;margin:0 0 0.25rem}
+.cc-sub{color:var(--accent);font-weight:700;margin:0 0 1rem}
+.cc-form .form-row{margin-bottom:1rem}
+.cc-form label{display:block;font-weight:700;margin-bottom:0.35rem}
+.cc-form input, .cc-form select, .cc-form textarea{width:100%;padding:0.6rem;border-radius:8px;border:2px solid #e6e6e6;font-size:1rem}
+.cc-form input:focus, .cc-form select:focus, .cc-form textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 10px rgba(233,69,96,0.15)}
+.form-actions{display:flex;gap:0.75rem;align-items:center}
+.btn{padding:0.6rem 1rem;border-radius:8px;border:none;background:#f0f0f0;color:#0f3460;font-weight:700;cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff}
+.btn.danger{background:linear-gradient(90deg,#e74c3c,#c0392b);color:#fff}
+.error{color:#e74c3c;font-size:0.9rem;margin-top:0.25rem}
+.cc-footer{color:#fff;text-align:center;padding:1rem;margin-top:1rem}
+
+/* schedule table */
+.table-wrapper{overflow:auto;margin-top:1rem}
+.schedule-table{width:100%;border-collapse:collapse;background:#fff;color:#0f3460;border-radius:8px;overflow:hidden}
+.schedule-table th, .schedule-table td{padding:0.75rem 1rem;border-bottom:1px solid #eee;text-align:left}
+.schedule-table thead th{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff}
+.schedule-footer{margin-top:1rem;font-weight:700}
+
+/* responsive */
+@media (max-width:768px){
+    .cc-main{margin:1rem}
+    .cc-title{font-size:1.5rem}
+    .form-actions{flex-direction:column;align-items:stretch}
+    .cc-header nav ul{flex-direction:column;gap:0.5rem}
+}
+@media (max-width:480px){
+    .schedule-table th:nth-child(4), .schedule-table td:nth-child(4){display:none}
+}

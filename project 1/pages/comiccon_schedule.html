@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comic-Con - My Schedule</title>
+    <link rel="stylesheet" href="../css/comiccon.css" />
+</head>
+<body>
+    <header class="cc-header">
+        <nav>
+            <ul>
+                <li><a href="comiccon_register.html">Register</a></li>
+                <li><a href="comiccon_schedule.html">My Schedule</a></li>
+                <li><a href="aboutus.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cc-main">
+        <section class="cc-container">
+            <h1 class="cc-title">📅 My Comic-Con Schedule</h1>
+            <p class="cc-sub">Manage your personalized lineup of sessions.</p>
+
+            <div class="schedule-controls">
+                <label for="filterFandom">Filter by Fandom:</label>
+                <select id="filterFandom">
+                    <option value="">All</option>
+                    <option value="anime">Anime</option>
+                    <option value="superheroes">Superheroes</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="fantasy">Fantasy</option>
+                </select>
+
+                <button id="sortTimeBtn" class="btn">Sort by Time</button>
+                <button id="clearAllBtn" class="btn danger">Clear All</button>
+                <button id="exportBtn" class="btn">Export JSON</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="scheduleTable" class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Session Title</th>
+                            <th>Fandom</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- rows inserted by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <footer class="schedule-footer">Total sessions: <span id="totalSessions">0</span></footer>
+        </section>
+    </main>
+
+    <footer class="cc-footer">&copy; 2025 Comic-Con Event Builder</footer>
+
+    <script src="../js/comiccon.js"></script>
+    <script>
+        // initialize schedule view
+        if (window.initScheduleView) window.initScheduleView();
+    </script>
+</body>
+</html>
